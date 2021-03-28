@@ -1,0 +1,52 @@
+solutions for exercises: 
+https://learngitbranching.js.org
+
+help level
+undo
+reset
+show goal
+
+# Rozkręcanie
+1. Odczep swój HEAD~3
+example:
+git checkout C1 (czyli commit)
+git checkout bugFix (czyli branch)
+solution:
+git checkout C4
+
+2. Referencje względne (^)
+example:
+git checkout main^
+git checkout HEAD^
+solution:
+git checkout bugFix^
+
+3. Referencje względne #2 (~)
+example:
+git checkout HEAD~4
+git branch -f main HEAD~3
+solution:
+git branch -f main C6
+git branch -f bugFix C0
+git checkout C1
+
+4. Odwracanie zmian w Gitcie
+example:
+git reset HEAD~1 (tylko lokalnie)
+git revert HEAD (zdalnie)
+solution:
+git reset HEAD~1
+git checkout pushed
+git revert HEAD
+
+# Przenoszenie pracy
+1. Wprowadzenie do Cherry-pick'ingu
+example:
+git cherry-pick C2 C4
+solution:
+git cherry-pick C3 C4 C7
+
+2. Wprowadzenie do interaktywnego Rebase'a
+example:
+git rebase -i HEAD~4
+solution: graphical
