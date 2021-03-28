@@ -6,6 +6,42 @@ undo
 reset
 show goal
 
+# Wprowadzenie
+1. Wprowadzenie do zatwierdzeń GIT-a (commit)
+example && solution:
+git commit
+
+2. Rozgałęzienia w GIT-cie (branch)
+example:
+git checkout mojBranch; git commit
+git checkout -b mojBranch (utwórz i przenieś)
+solution:
+git checkout -b bugFix
+
+3. Łączenie/Scalanie w GIT (merge)
+example:
+git merge bugFix
+git checkout bugFix; git merge main
+solution:
+git branch bugFix
+git checkout bugFix
+git commit
+git checkout main
+git commit
+git merge bugFix
+
+4. Wprowadzenie do Rebase
+example:
+git rebase main
+solution:
+git branch bugFix
+git checkout bugFix
+git commit
+git checkout main
+git commit
+git checkout bugFix
+git rebase main
+
 # Rozkręcanie
 1. Odczep swój HEAD~3
 example:
