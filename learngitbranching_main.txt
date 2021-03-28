@@ -50,3 +50,34 @@ git cherry-pick C3 C4 C7
 example:
 git rebase -i HEAD~4
 solution: graphical
+
+# Po trochu wszystkiego
+1. Wzięcie tylko 1 commita
+solution:
+git checkout main
+git cherry-pick C4
+
+2. Żonglowanie commitami
+solution:
+git rebase -i HEAD~2 (zamienić kolejnościa)
+git commit --amend
+git rebase -i HEAD~2 (zamienić kolejnościa)
+git branch -f main caption
+
+3. Żonglowanie commitami #2
+solution:
+git checkout main
+git cherry-pick C2
+git commit --amend
+git cherry-pick C3
+
+4. Git Tagi
+example:
+git tag v1 C1
+solution:
+git tag v1 C2
+git checkout C1
+git tag v0 C1
+
+5. Git Describe
+nothing to do
