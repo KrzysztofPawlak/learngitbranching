@@ -5,6 +5,7 @@ help level
 undo
 reset
 show goal
+show solution
 
 # Wprowadzenie
 1. Wprowadzenie do zatwierdzeń GIT-a (commit)
@@ -117,3 +118,22 @@ git tag v0 C1
 
 5. Git Describe
 nothing to do
+
+# Po trochu wszystkiego
+1. Rebase Wielu Gałęzi
+solution:
+git rebase main bugFix
+git rebase bugFix bugFix
+git rebase side another
+git rebase another main
+
+2. Wielu rodziców
+example:
+git checkout main^
+git checkout main^2
+git checkout HEAD~; git checkout HEAD^2; git checkout HEAD~2
+git checkout HEAD~^2~2
+solution:
+git branch HEAD~^2~
+
+3. Gałęziowe Spaghetti
