@@ -137,3 +137,9 @@ solution:
 git branch HEAD~^2~
 
 3. Gałęziowe Spaghetti
+solution:
+git checkout one
+git cherry-pick C4 C3 C2
+git checkout two
+git cherry-pick C5 C4 C3 C2
+git rebase C2 three / git branch -f three C2
