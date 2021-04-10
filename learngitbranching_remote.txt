@@ -1,0 +1,53 @@
+# Push & Pull
+1 Wstęp do klonowania (clone)
+example && solution: 
+git clone
+
+2. Zdalne gałęzie
+example && solution:
+git commit
+git checkout o/main; git commit
+
+3. Git Fetch
+example && solution:
+git fetch
+
+4. Git Pulling
+example && solution:
+git fetch; git merge o/main
+git pull
+
+5. Faking Teamwork
+git fakeTeamwork
+git fakeTeamwork foo 3
+
+solution:
+git clone
+git fakeTeamwork main 2
+git commit
+git pull
+
+6. Git Pushin
+solution:
+git commit
+git commit
+git push
+
+7. Diverged History
+example:
+git fetch; git rebase o/main; git push
+git fetch; git merge o/main; git push
+git pull --rebase; git push
+git pull; git push
+
+solution:
+git clone
+git fakeTeamwork
+git commit
+git pull --rebase; git push
+
+8. Locker Master
+solution:
+git reset --hard o/main
+git checkout -b feature C2
+git push origin feature
